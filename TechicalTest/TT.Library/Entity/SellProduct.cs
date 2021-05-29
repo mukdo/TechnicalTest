@@ -9,7 +9,7 @@ namespace TT.Library.Entity
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
-        public IList<Product> Products { get; set; }
+        public virtual Product Products { get; set; }
         public float SellingPrice { get; set; }
         public int Quantity { get; set; }
         public DateTime SellingDate { get; set; }

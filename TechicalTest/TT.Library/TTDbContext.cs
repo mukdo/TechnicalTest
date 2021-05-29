@@ -31,12 +31,15 @@ namespace TT.Framework
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Product>()
+                .HasMany(s => s.SellProducts)
+                .WithOne(p => p.Products);
  
             base.OnModelCreating(builder);
         }
 
       public DbSet<Product> Products { get; set; }
-      public DbSet<SellProduct> SellProducts { get; set; }
+      public virtual DbSet<SellProduct> SellProducts { get; set; }
 
     
 

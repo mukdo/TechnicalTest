@@ -11,6 +11,6 @@ namespace TT.Library.Entity
         public string Name { get; set; }
         public float PurchesPrice { get; set; }
         public int Quantity { get; set; }
-        public SellProduct SellProduct { get; set; }
+        public IList<SellProduct> SellProducts { get; set; }
     }
 }

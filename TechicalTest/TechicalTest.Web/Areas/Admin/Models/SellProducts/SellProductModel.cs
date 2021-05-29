@@ -26,7 +26,7 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
                 data = (from record in data.sellProducts
                         select new string[]
                         {
-                                record.ProductId.ToString(),
+                                record.Products.Name,
                                 record.SellingPrice.ToString(),
                                 record.Quantity.ToString(),
                                 record.SellingDate.ToString(),
