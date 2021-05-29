@@ -22,7 +22,9 @@ namespace TechicalTest.Web.Areas.Admin.Controllers
         public IActionResult Index()
         {
             
-           // ViewBag.countStudentRegistration = _sMDbContext.StudentRegistrations.Count();
+            ViewBag.countProduct = _dbContext.Products.Count();
+            ViewBag.totalSale = _dbContext.SellProducts.Sum(x => x.SellingPrice * x.Quantity);
+
             var model = new DashBoardModel();
             
             return View(model);

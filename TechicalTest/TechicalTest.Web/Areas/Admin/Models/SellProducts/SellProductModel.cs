@@ -18,7 +18,7 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
                                   dataTables.PageIndex,
                                    dataTables.PageSize,
                                   dataTables.SearchText,
-                                  dataTables.GetSortText(new string[] {"productId", "SellingPrice", "SellingDate" , "Quantity" , "Id" }));
+                                  dataTables.GetSortText(new string[] {"productName", "SellingPrice", "SellingDate" , "Quantity" , "Id" }));
             return new
             {
                 recordsTotal = data.total,
