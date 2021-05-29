@@ -7,7 +7,7 @@ namespace TT.Library.Service
 {
     public interface ISellProductService : IDisposable
     {
-        (IList<Product> sellProducts, int total, int totalDisplay) GetSellProducts(int pageindex,
+        (IList<SellProduct> sellProducts, int total, int totalDisplay) GetSellProducts(int pageindex,
                                                                           int Pagesize,
                                                                           string searchText,
                                                                           string sortText);
@@ -15,5 +15,6 @@ namespace TT.Library.Service
         void EditSellProduct(SellProduct product);
         SellProduct GetSellProduct(int Id);
         SellProduct DeleteSellProduct(int Id);
+        IList<Product> GetProduct();
     }
 }

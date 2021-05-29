@@ -9,7 +9,7 @@ namespace TT.Framework
     public interface ITTUnitOfWork:IUnitOfWork
     {
         IProductRepository ProductRepository { get; set; }
- 
+        ISellProductRepository SellProductRepository { get; set; }
 
     }
 }

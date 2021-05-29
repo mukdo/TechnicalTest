@@ -1,19 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-TechicalTest.Web-534135ED-1D09-4744-A901-9705F4BC6D08</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>aspnet-TechicalTest.Web-534135ED-1D09-4744-A901-9705F4BC6D08</UserSecretsId>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
-    <PackageReference Include="Serilog" Version="2.10.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+		<PackageReference Include="Serilog" Version="2.10.0" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="4.1.2" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+		<PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\TT.Data\TT.Data.csproj" />
+	  <ProjectReference Include="..\TT.Library\TT.Library.csproj" />
+	  <ProjectReference Include="..\TT.MemberShip\TT.MemberShip.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Areas\Admin\Controllers\" />
+	  <Folder Include="Areas\Admin\Data\" />
+	  <Folder Include="Areas\Admin\Models\" />
+	  <Folder Include="Areas\Admin\Views\" />
+	  <Folder Include="Data\" />
+	</ItemGroup>
 
 </Project>

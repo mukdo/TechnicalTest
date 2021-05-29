@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using System;
 using TT.Library.Repository;
+using TT.Library.Service;
 using TT.MemberShip.Contexts;
 
 namespace TT.Framework
@@ -37,6 +38,12 @@ namespace TT.Framework
             builder.RegisterType<SellProductRepository>().As<ISellProductRepository>()
                .InstancePerLifetimeScope();
 
+
+            builder.RegisterType<ProductService>().As<IProductService>()
+             .InstancePerLifetimeScope();
+
+            builder.RegisterType<SellProductService>().As<ISellProductService>()
+               .InstancePerLifetimeScope();
             base.Load(builder);
         }
     }

@@ -7,7 +7,7 @@ using TT.Library.Entity;
 
 namespace TT.Library.Repository
 {
-    public class ProductRepository : Repository<SellProduct, int, TTDbContext> , IProductRepository
+    public class ProductRepository : Repository<Product, int, TTDbContext> , IProductRepository
     {
         public ProductRepository(TTDbContext dbContext) : base(dbContext)
         {
