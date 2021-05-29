@@ -18,7 +18,7 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
                                   dataTables.PageIndex,
                                    dataTables.PageSize,
                                   dataTables.SearchText,
-                                  dataTables.GetSortText(new string[] { "Id", "productId", "SellingPrice", "SellingDate" , "Quantity" }));
+                                  dataTables.GetSortText(new string[] {"productId", "SellingPrice", "SellingDate" , "Quantity" , "Id" }));
             return new
             {
                 recordsTotal = data.total,
@@ -28,8 +28,8 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
                         {
                                 record.ProductId.ToString(),
                                 record.SellingPrice.ToString(),
-                                record.SellingDate.ToString(),
                                 record.Quantity.ToString(),
+                                record.SellingDate.ToString(),
                                 record.Id.ToString()
     }
                    ).ToArray()
@@ -43,21 +43,7 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
 
         }
 
-        public IList<SelectListItem> GetProductList()
-        {
-            IList<SelectListItem> listItems = new List<SelectListItem>();
-
-            foreach (var item in _sellPoductService.GetProduct())
-            {
-                var ctg = new SelectListItem
-                {
-                    Text = item.Name,
-                    Value = item.Id.ToString()
-                };
-                listItems.Add(ctg);
-            }
-            return listItems;
-        }
+      
 
     }
 }

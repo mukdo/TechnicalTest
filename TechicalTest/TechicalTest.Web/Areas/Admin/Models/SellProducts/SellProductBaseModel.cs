@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,20 @@ namespace TechicalTest.Web.Areas.Admin.Models.SellProducts
             _sellPoductService.Dispose();
         }
 
+        public IList<SelectListItem> GetProductList()
+        {
+            IList<SelectListItem> listItems = new List<SelectListItem>();
+
+            foreach (var item in _sellPoductService.GetProduct())
+            {
+                var ctg = new SelectListItem
+                {
+                    Text = item.Name,
+                    Value = item.Id.ToString()
+                };
+                listItems.Add(ctg);
+            }
+            return listItems;
+        }
     }
 }

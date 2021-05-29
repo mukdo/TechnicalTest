@@ -63,38 +63,27 @@ namespace TechicalTest.Web.Areas.Admin.Models
                     },
                     new MenuItem
                     {
-                        Title = "Student",
+                        Title = "Product",
                         Childs = new List<MenuChildItem>
                         {
-                            new MenuChildItem{ Title = "View Student", Url = "/Admin/Student" },
-                            new MenuChildItem{ Title = "Add Student", Url = "/Admin/Student/CreateStudent" }
+                            new MenuChildItem{ Title = "View Product", Url = "/Admin/Product" },
+                            new MenuChildItem{ Title = "Add Product", Url = "/Admin/Product/CreateProduct" }
 
                         }
 
                     },
                     new MenuItem
                     {
-                        Title = "Course",
+                        Title = "Sell Product",
                         Childs = new List<MenuChildItem>
                         {
-                            new MenuChildItem{ Title = "View Course", Url = "/Admin/Course/" },
-                            new MenuChildItem{ Title = "Add Course", Url ="/Admin/Course/CreateCourse"}
+                            new MenuChildItem{ Title = "View Selling Product", Url = "/Admin/SellProduct/" },
+                            new MenuChildItem{ Title = "Add Selling Product", Url ="/Admin/SellProduct/CreateSellProduct"}
                                 
                         }
 
                     },
-                    new MenuItem
-                    {
-                        Title = "Student Registration",
-                        Childs = new List<MenuChildItem>
-                        {
-                            new MenuChildItem{ Title = "View Registration", Url = "/Admin/StudentRegistration" },
-                            new MenuChildItem{ Title = "Add Registration", Url ="/Admin/StudentRegistration/CreateRegistration"}
-
-                        }
-
-                    },
-
+                 
                     new MenuItem
                     {
                         Title = "Setting",
